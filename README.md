@@ -151,7 +151,7 @@ The repository includes three lightweight behavioral checks covering semantic tr
 | Completeness | LLM-as-a-judge scores how fully the generated answer covers the material points in `reference_answer`, from 0 to 1. | Implemented |
 | Ticket citation rate | Percentage of troubleshooting answers containing a valid `TICK-*` ID | Implemented |
 | Latency | End-to-end agent execution and per-tool time per query measured with a monotonic clock; the report includes mean latency. | Implemented |
-| Cost per run | Standard cost per token for OpenAI's GPT-4o mini is $0.00000015 per input token and $0.0000006 per output token | Not yet instrumented |
+| Cost per run | Standard cost per token for OpenAI's GPT-4o mini is $0.00000015 per input token and $0.0000006 per output token | Implemented |
 | Human intervention rate | Percentage of questions requiring analyst escalation | N/A |
 
 The evaluation suite uses `evaluation_queries.json`, which contains 15 questions with reference answers and labeled relevant ticket IDs. The current dataset contains **20 synthetic resolved tickets** spanning **14 categories**. Authentication is the largest category with four tickets; priorities comprise nine High, five Critical, and six Medium tickets. These counts describe the demo corpus, not production performance.
