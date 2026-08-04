@@ -146,10 +146,10 @@ The repository includes three lightweight behavioral checks covering semantic tr
 | F1@k | Harmonic mean of Precision@k and Recall@k. | Implemented |
 | Retrieval quality | Recall@3 / MRR against labeled relevant tickets. Mean Reciprocal Rank (MRR) and Hit Rate@k compare ranked semantic-search results with labeled `relevant_ticket_ids`. | Implemented |
 | Task success rate | Percentage of judge-evaluated answers marked successful based on relevance, correctness, completeness, and groundedness. | Implemented |
-| Tool-selection accuracy | Expected tool vs. tool actually invoked | Test cases defined; automated assertion/reporting is not yet implemented |
+| Tool-selection accuracy | Expected tool vs. tool actually invoked | Test cases defined and implemented |
 | Groundedness | Percentage of factual claims supported by retrieved ticket fields. LLM-as-a-judge scores the proportion of substantive answer claims supported by the agent’s retrieved evidence, from 0 to 1. | Implemented |
 | Completeness | LLM-as-a-judge scores how fully the generated answer covers the material points in `reference_answer`, from 0 to 1. | Implemented |
-| Ticket citation rate | Percentage of troubleshooting answers containing a valid `TICK-*` ID | Partially checked with expected substrings |
+| Ticket citation rate | Percentage of troubleshooting answers containing a valid `TICK-*` ID | Implemented |
 | Latency | End-to-end agent execution and per-tool time per query measured with a monotonic clock; the report includes mean latency. | Implemented |
 | Cost per run | Standard cost per token for OpenAI's GPT-4o mini is $0.00000015 per input token and $0.0000006 per output token | Not yet instrumented |
 | Human intervention rate | Percentage of questions requiring analyst escalation | N/A |
