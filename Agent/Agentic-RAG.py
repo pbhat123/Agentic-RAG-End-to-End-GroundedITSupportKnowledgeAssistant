@@ -413,3 +413,27 @@ if __name__ == "__main__":
         print(json.dumps(evaluation_report["summary"], indent=2))
     else:
         run_demo()
+
+# Agent Evaluation
+test_cases = [
+    {
+        "query": "How do I fix login issues?",
+        "expected_tool": "SearchSimilarTickets",
+        "should_contain": ["authentication", "TICK"]
+    },
+    {
+        "query": "Show ticket TICK-001",
+        "expected_tool": "GetTicketByID",
+        "should_contain": ["TICK-001"]
+    },
+    {
+        "query": "How many tickets are there?",
+        "expected_tool": "GetTicketStatistics",
+        "should_contain": ["total", "category"]
+    }
+]
+
+for test in test_cases:
+    response = run_agent(test["query"])
+    print(test["query"])
+    print(response[:150])
